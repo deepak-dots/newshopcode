@@ -237,10 +237,11 @@
 <!--end-boost-pfs-filter-css-->
 
 
+  {% if template == 'cart' %}{% include "revy-bundle-script" %}{% endif %}
+
+
+
 </head>
-
-
-
 <body class="template-{{ template | split: '.' | first }} {{ template }} {{ ymal_product_cls }} {% if template == "product" %}product-{{ product.handle }}{% endif %}">
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
@@ -328,5 +329,6 @@
 <!--begin-boost-pfs-js-->
   {% render 'boost-pfs' %}
 <!--end-boost-pfs-js-->
+  {% include 'revy-bundle-script' %}
 </body>
 </html>
